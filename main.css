@@ -225,7 +225,7 @@
     font-family: 'Abril Fatface', cursive;
     text-decoration: underline;
 }
-@media (max-width: 767px) {
+@media (max-width: 450px) {
     .footer,.buttonn {
         display:none;
     }
