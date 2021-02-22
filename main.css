@@ -258,7 +258,7 @@ a:hover{
         display:none;
     }
 }
-@media (max-width: 858px){
+@media (max-width: 150px){
     .topic{
         font-size: 25px;
     }
