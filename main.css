@@ -8,7 +8,7 @@ body{
     background-color: #101010;
 }
 //
-nav{
+nav{--
     font-family: 'Abril Fatface';
     height: 80px;
     width: 100%;
@@ -258,7 +258,7 @@ a:hover{
         display:none;
     }
 }
-@media (max-width: 150px){
+@media (max-width: 858px){
     .topic{
         font-size: 25px;
     }
