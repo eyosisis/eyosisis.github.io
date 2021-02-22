@@ -5,68 +5,78 @@
     text-decoration: none;
 }
 body{
-    background: url("background.jpg");
-    background-position: center;
-    background-attachment: fixed;
-}
-.header{
-    width: 100%;
-    height: 60px;
-    display: block;
     background-color: #101010;
-
 }
-.inner-header{
-    width: 1000px;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
+//
+nav{--
+    font-family: 'Abril Fatface';
+    height: 80px;
+    width: 100%;
 }
-.logo-container{
-    height: 100%;
-    display: table;
-    float: left;
-}
-.logo-container h1{
-    height: 100%;
-    color:white;
-    display: table-cell;
-    vertical-align: middle;
-    font-family: 'PT Serif';
-    font-size: 32px;
-    font-weight: 200;
-}
-.logo-container h1 span{
-    font-weight: 800;
-}
-.navigation{
-    height: 100%;
-    float: right;
-}
-.navigation a{
-    height: 100%;
-    display: table;
-    float: left;
-    padding: 0px 20px;
-}
-.navigation a li{
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
+label.logo{
     color: white;
-    font-family: 'Akaya Telivigala';
-    font-size: 16px;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
 }
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+   color: rgba(260,260,260);
+   padding: 7px 13px;
+   border-radius: 3px;
+   font-size: 17px;
+   text-transform: uppercase;
+}
+a:hover{
+     color: gold;
+     transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.active{
+    text-decoration: underline;
+}
+//
+.section{
 
+}
 .topic{
     text-align: center;
     height: 100%;
     color:white;
     font-family: 'PT Serif';
     font-size: 35px;
+    background: url(background.jpg);
+    background-size: cover;
+    height: calc(100vh-160px)
+    width:100%;
 }
 
 .main{
+    background: url(background.jpg);
+    background-size: cover;
+    height: calc(100vh-160px);
+    width:100%;
      height: 100%;
      width: 100%;
      display:flex;
@@ -107,7 +117,7 @@ body{
     padding: 30px 60px;
     font-size: 20px;
     font-family: 'Abril Fatface', cursive;
-    color: rgba(260,260,260,.5);
+    color: rgba(260,260,260);
     cursor: pointer;
     margin: 10px;
     transition:0.8s;
@@ -116,7 +126,7 @@ body{
      padding: 30px 55px;
 }
 .bn1:hover,.bn2:hover{
-    color: rgba(260,260,260,1);
+    color: gold;
 }
 
 .photos{
@@ -146,10 +156,10 @@ body{
     opacity: 0.7;
 }
 .contacts a{
-    color: rgba(260,260,260,.5);
+    color: rgba(260,260,260);
 }
 .contacts a:hover{
-    color: rgba(260,260,260,1);
+    color: gold;
 }
 .contacts i{
     margin: 63px;
@@ -228,9 +238,74 @@ body{
     font-family: 'Abril Fatface', cursive;
     text-decoration: underline;
 }
-@media (max-width: 450px) {
-    .footer,.buttonn {
+
+@media (max-width: 952px){
+
+    .main p{
+        letter-spacing: 3px;
+    }
+    .main p span,.main p .bff{
+        margin-left: 0;
+    }
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .footer {
         display:none;
     }
 }
+@media (max-width: 858px){
+    .topic{
+        font-size: 25px;
+    }
+     .main p{
+        letter-spacing: 5px;
+    }
+    .main p span, .main p .bff{
+        margin-left: 0;
+    }
 
+    .checkbtn{
+        display: block;
+    }
+
+ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: grey;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+
+}
+nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+nav ul li a{
+    font-size: 20px;
+}
+a:hover{
+    background: none;
+    color: gold;
+}
+#check:checked ~ ul{
+    left: 0;
+}
+.contacts{
+    line-height: 100px;
+}
+.fa{
+    display: none;
+}
+.footer,.buttonn {
+        display:none;
+    }
+}
