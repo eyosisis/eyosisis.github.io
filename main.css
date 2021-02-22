@@ -8,7 +8,10 @@ body{
     background-color: #101010;
 }
 //
-nav{--
+.footer {
+        display:none;
+    }
+nav{
     font-family: 'Abril Fatface';
     height: 80px;
     width: 100%;
