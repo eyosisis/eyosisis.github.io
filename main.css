@@ -1,26 +1,50 @@
+
 *{
     padding: 0;
     margin: 0;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
-.brrr{
-    display:none;
-body{
-    background-color: #101010;
+.photos{
+    text-align: center;
 }
-//
-nav{--
+.photos img{
+     width: 60%;
+     margin: 10px;
+}
+button{
+    color: black;
+    float: right;
+    margin-left: 500px;
+    margin-top: 50px;
+    display: none;
+}
+.main{
+    width: 100%;
+    display: inline-block;
+}
+.main p{
+    float: left;
+    font-size:25px;
+    font-weight: bold;
+    margin: 40px;
+}
+nav{
+    width: 100%;
+    background-color: #212F3C;
     font-family: 'Abril Fatface';
     height: 80px;
-    width: 100%;
 }
 label.logo{
     color: white;
-    font-size: 35px;
+    font-size: 40px;
     line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
+    padding: 0 20px;
+    font-weight: 1;
+}
+label.logo span{
+    font-family: 'Indie Flower';
 }
 nav ul{
     float: right;
@@ -32,11 +56,13 @@ nav ul li{
     margin: 0 5px;
 }
 nav ul li a, nav ul li span{
+    font-family: 'Indie Flower';
    color: rgba(260,260,260);
    padding: 7px 13px;
    border-radius: 3px;
    font-size: 17px;
    text-transform: uppercase;
+   letter-spacing: 4px;
 }
 a:hover{
      color: gold;
@@ -46,14 +72,15 @@ nav ul li span:hover{
     color: rgba(260,260,260,.5);
 }
 .checkbtn{
-    font-size: 30px;
+    font-family: 'Indie Flower';
+    font-size: 50px;
     color: white;
-    font-weight: bold;
+    font-weight: 3;
     float: right;
-    line-height: 80px;
-    margin-right: 40px;
+    line-height: 55px;
+    margin-right: 15px;
     cursor: pointer;
-    display: none;
+    display: block;
 }
 #check{
     display: none;
@@ -61,183 +88,9 @@ nav ul li span:hover{
 .active{
     text-decoration: underline;
 }
-//
-.section{
-
+#check:checked ~ ul{
+    left: 0;
 }
-.topic{
-    text-align: center;
-    height: 100%;
-    color:white;
-    font-family: 'PT Serif';
-    font-size: 35px;
-    background: url(background.jpg);
-    background-size: cover;
-    height: calc(100vh-160px)
-    width:100%;
-}
-
-.main{
-    background: url(background.jpg);
-    background-size: cover;
-    height: calc(100vh-160px);
-    width:100%;
-     height: 100%;
-     display:flex;
-}
-.main p{
-
-    float:left;
-    width:50%;
-    height:100%;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 20px;
-    line-height: 30px;
-    color:white;
-    margin-left: 150px;
-    letter-spacing: 2px;
-}
-.main p span{
-     margin-left: 195px;
-}
-.main p .bff{
-    margin-left: 149px;
-}
-.main p a{
-    color: white;
-    text-decoration: underline;
-}
-.main.buttonn{
-    vertical-align: middle;
-    height: 100%;
-    width: 50%;
-    display: block;
-    float: right;
-
-}
-.bn1,.bn2{
-    border: 1px solid white;
-    background:none;
-    padding: 30px 60px;
-    font-size: 20px;
-    font-family: 'Abril Fatface', cursive;
-    color: rgba(260,260,260);
-    cursor: pointer;
-    margin: 10px;
-    transition:0.8s;
-}
-.bn2{
-     padding: 30px 55px;
-}
-.bn1:hover,.bn2:hover{
-    color: gold;
-}
-
-.photos{
-    background: url("background.jpg");
-     height: 100%;
-     width: 100%;
-     text-align: center;
-}
-
-.photos img{
-    margin: 10px;
-    width:50%;
-    height: auto;
-}
-.contacts{
-    background: url("background.jpg");
-    height: 100%;
-    width: 100%;
-    color: white;
-    text-align: center;
-}
-.contacts a{
-    margin-top: 200px;
-    margin: 100px;
-    font-size: 40px;
-}
-.fa:hover {
-    opacity: 0.7;
-}
-.contacts a{
-    color: rgba(260,260,260);
-}
-.contacts a:hover{
-    color: gold;
-}
-.contacts i{
-    margin: 63px;
-    padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-.fa-snapchat-ghost {
-  background: #fffc00;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.fa-cloud{
-    background-color: #3498DB;
-    color: white;
-}
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-.brrr{
-    display: none;
-}
-
-@media only screen and (min-width: 320px){
-    label.logo{
-       margin-top: 20px;
-        font-size: 30px;
-        padding-left: 30px;
-    }
-.nav ul li a{
-    font-size: 100px;
-}
-.contacts{
-    line-height: 150px;
-}
-.brrr{
-    display: block;
-}
-.main p{
-        margin-left: 50px;
-        margin-bottom: 20px;
-        margin-top: 30px;
-        font-size: 16px;
-    }
-
-.topic{
-      margin-top: 20px;
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-.main p{
-        font-family: arial;
-        letter-spacing: 5px;
-    }
-.main p span, .main p .bff{
-        margin-left: 0;
-    }
-
-.checkbtn{
-        margin-right: 16px;
-        margin-bottom: 20px;
-        font-size: 30px;
-        display: block;
-    }
 
 ul{
     position: fixed;
@@ -262,15 +115,47 @@ a:hover{
     background: none;
     color: gold;
 }
-#check:checked ~ ul{
-    left: 0;
+a :hover{
+   color: gold;
+}
+.topic h1{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Akaya Telivigala';
+    font-weight: bold;
+}
+.contacts{
+    margin-top: 30px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 90px;
+}
+.contacts a{
+    font-size: 45px;
+    font-weight: bold;
+    color: #111;
 }
 
-.fa{
-    display: none;
+.fa-instagram {
+
+  color: #212F3C;
 }
-.buttonn {
-        display:none;
-    }
+.fa-snapchat-ghost {
+
+  color: #212F3C;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-cloud{
+
+    color: #212F3C;
+}
+.fa-google {
+
+  color: #212F3C;
+}
+.contacts a:hover {
+    color: gold;
 }
 
